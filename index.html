@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="estilos.css">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	
+</head>
+<body>
+	<div id="misTareas">
+		<h1>Mis tareas</h1>
+		<input type="text" placeholder="Añade una nueva tarea...." v-model="nuevaTarea" @keyup.enter="addTarea">
+		<ul>
+			<li class="animated bounceInLeft" v-for="tarea in tareas" @click="compTarea(tarea)" :class="{tachar:tarea.completada}">
+				{{ tarea.text }}
+				<div :class="{completada:tarea.completada}"></div>
+			</li>
+		</ul>
+		
+	</div>
+
+	<script src="vue.js"></script>
+	
+</body>
+</html>
