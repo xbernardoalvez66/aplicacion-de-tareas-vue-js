@@ -13,7 +13,7 @@
 		<input type="text" placeholder="Añade una nueva tarea...." v-model="nuevaTarea" @keyup.enter="addTarea">
 		<ul>
 			<li class="animated bounceInLeft" v-for="tarea in tareas" @click="compTarea(tarea)" :class="{tachar:tarea.completada}">
-				{{ tarea.text }}
+				
 				<div :class="{completada:tarea.completada}"></div>
 			</li>
 		</ul>
